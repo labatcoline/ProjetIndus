@@ -4,11 +4,6 @@ var data = d3.csv("data/price.csv", draw);
 //Fonction d'affichage
 function draw(data){
 
-  //X scale
-
-  var x = []
-  data.forEach(function(d){ x.push(d.name)}); //Ajoute name à la variable x
-
   //filter the data
   var ndx = crossfilter(data);
   //Select the name as dimension
